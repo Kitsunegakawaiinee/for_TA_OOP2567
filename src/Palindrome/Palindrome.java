@@ -22,21 +22,6 @@ public class Palindrome
                 return for_return;
             }
         }
-
-        /**
-         * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
-         * @param input ต้องเป็น Linkedlist ของ character | not null
-         * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
-         */
-        public static boolean palindromeCorrect(LinkedList<Character> input)
-        {
-            if(input.size() <= 1) return true;
-
-            char first = input.removeFirst(), second = input.removeLast();
-
-            if(first == second) return (true && palindromeCorrect(input));
-            else return false;
-        }
         
         /**
          * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
@@ -55,7 +40,9 @@ public class Palindrome
 
             boolean check = first == last; 
 
-            return check || palindromeWTHRecursive(input);
+            result = check || palindromeWTHRecursive(input);
+
+            return result;
         }
 
         /**
@@ -80,4 +67,19 @@ public class Palindrome
 
             return result;
         }
+
+    /**
+     * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
+     * @param input ต้องเป็น Linkedlist ของ character | not null
+     * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case
+     */
+    public static boolean palindromeCorrect(LinkedList<Character> input)
+    {
+        if(input.size() <= 1) return true;
+
+        char first = input.removeFirst(), second = input.removeLast();
+
+        if(first == second) return (true && palindromeCorrect(input));
+        else return false;
+    }
 }
