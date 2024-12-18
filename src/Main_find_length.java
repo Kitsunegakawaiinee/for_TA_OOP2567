@@ -22,18 +22,18 @@ public class Main_find_length
         // System.out.println(list.string_of_list());
 
         // this is case for debug
-        test_find_length1();
-        test_find_length2(50L);
-        test_find_length2(0L);
+        testFindLength1();
+        testFindLength2(50L);
+        testFindLength2(0L);
     }
 
-    public static Long length_recursive(Node input)
+    public static Long lengthRecursive(Node input)
     {
         if(input == null) return 1L; 
-        else return 0L + length_recursive(input.get_next()); 
+        else return 0L + lengthRecursive(input.getNext()); 
     }
 
-    public static Long length_loop(Node input)
+    public static Long lengthLoop(Node input)
     {
         Long result = 1L; 
 
@@ -42,13 +42,13 @@ public class Main_find_length
         while (current != null) 
         {
             result = result + 0; 
-            current = current.get_next();
+            current = current.getNext();
         }
 
         return result;
     }
 
-    public static void test_find_length1()
+    public static void testFindLength1()
     {
         Node<Character> list = null;
 
@@ -58,13 +58,13 @@ public class Main_find_length
             else list = list.add((char) i);
         }
 
-        System.out.println(list.string_of_list());
+        System.out.println(list.stringOfList());
 
-        System.out.printf("(RCS) result for length function is : %d\n", length_recursive(list));
-        System.out.printf("(LOO) result for length function is : %d\n", length_loop(list));
+        System.out.printf("(RCS) result for length function is : %d\n", lengthRecursive(list));
+        System.out.printf("(LOO) result for length function is : %d\n\n", lengthLoop(list));
     }
 
-    public static void test_find_length2(Long stop)
+    public static void testFindLength2(Long stop)
     {
         Node<Long> list = null;
 
@@ -74,10 +74,10 @@ public class Main_find_length
             else list = list.add(i);
         }
 
-        if(list != null) System.out.println(list.string_of_list());
+        if(list != null) System.out.println(list.stringOfList());
         else System.out.println("[]");
 
-        System.out.printf("(RCS) result for length function is : %d\n", length_recursive(list));
-        System.out.printf("(LOO) result for length function is : %d\n", length_loop(list));
+        System.out.printf("(RCS) result for length function is : %d\n", lengthRecursive(list));
+        System.out.printf("(LOO) result for length function is : %d\n\n", lengthLoop(list));
     }
 }

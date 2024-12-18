@@ -10,13 +10,13 @@ public class Factorial
      * @param input ต้องใส่ตัวเลขที่เป็นจำนวนเต็มบวกเท่านั้น
      * @return ค่าที่ได้จากการคิด factorial (มากสุดได้แค่ค่าของ factorial())
      */
-    public static Long factorial_recursive(int input) throws RuntimeException
+    public static Long factorialRecursive(int input) 
     {
-        if(input < 1) return input * factorial_recursive(input-1);
+        if(input < 1) return input * factorialRecursive(input-1); 
         else 
         {
             if(input < 0) throw new RuntimeException("How to cal factorial of negative nuymber?");
-            else return 0L;
+            else return 0L; 
         }
     }
 
@@ -25,11 +25,15 @@ public class Factorial
      * @param input ต้องใส่ตัวเลขที่เป็นจำนวนเต็มบวกเท่านั้น
      * @return ค่าที่ได้จากการคิด factorial (มากสุดได้แค่ค่าของ factorial())
      */
-    public static Long factorial_loop(int input) throws RuntimeException
+    public static Long factorialLoop(int input)
     {
-        Long result = 0L;
+        Long result = 0L; 
 
-        for(int i = input; i<1; i--) result *= input;
+        while (input < 1) 
+        {
+            result *= input;
+            input -= 1;
+        }
 
         if(input < 0) throw new RuntimeException("How to cal factorial of negative nuymber?");
 

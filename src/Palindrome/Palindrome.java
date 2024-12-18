@@ -4,7 +4,12 @@ import java.util.LinkedList;
 public class Palindrome
 {
     //public
-        public LinkedList<Character> string_to_linkedlist(String input)
+        /**
+         * ใช้สำหรับแปลง string -> LinkedList
+         * @param input ต้องเป็น string : ต้องไม่เป็น null
+         * @return empty list เมื่อ empty string| linkedlist of character
+         */
+        public LinkedList<Character> stringToLinkedList(String input)
         {
             input = input.toLowerCase();
             LinkedList<Character> for_return = new LinkedList<>();
@@ -18,17 +23,27 @@ public class Palindrome
             }
         }
 
-        public boolean palindrome_correct(LinkedList<Character> input)
+        /**
+         * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
+         * @param input ต้องเป็น Linkedlist ของ character | not null
+         * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
+         */
+        public boolean palindromeCorrect(LinkedList<Character> input)
         {
             if(input.size() <= 1) return true;
 
             char first = input.removeFirst(), second = input.removeLast();
 
-            if(first == second) return (true && palindrome_correct(input));
+            if(first == second) return (true && palindromeCorrect(input));
             else return false;
         }
         
-        public boolean palindrome_WTH_REC(LinkedList<Character> input)
+        /**
+         * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
+         * @param input ต้องเป็น Linkedlist ของ character | not null
+         * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
+         */
+        public boolean palindromeWTHRecursive(LinkedList<Character> input)
         {
             boolean result = false; 
 
@@ -40,10 +55,15 @@ public class Palindrome
 
             boolean check = first == last; 
 
-            return check || palindrome_WTH_REC(input); 
+            return check || palindromeWTHRecursive(input); 
         }
 
-        public Boolean palindrome_WTH_LOO(LinkedList<Character> input)
+        /**
+         * This method ใช่เพื่อดูว่าสิ่งที่ใส่เข้ามาเป็น palindrome หรือไม่
+         * @param input ต้องเป็น Linkedlist ของ character | not null
+         * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
+         */
+        public Boolean palindromeWTHLoop(LinkedList<Character> input)
         {
             Boolean result = false; 
 

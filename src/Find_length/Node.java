@@ -96,7 +96,7 @@ public class Node<Type> implements Iterable<Node<Type>>
              * next getter 
              * @return เอาตัวต่อไปของลิสมา
              */
-            public Node<Type> get_next()
+            public Node<Type> getNext()
             {
                 return next;
             }
@@ -105,7 +105,7 @@ public class Node<Type> implements Iterable<Node<Type>>
              * value getter 
              * @return เอาค่าที่ตัวนี้เก็บไว้มา
              */
-            public Type get_value()
+            public Type getValue()
             {
                 return value;
             }
@@ -119,10 +119,10 @@ public class Node<Type> implements Iterable<Node<Type>>
 
             public String toString()
             {
-                return (value.toString());
+                return (value == null)? "NULL" : (value.toString());
             }
 
-            public String string_of_list()
+            public String stringOfList()
             {
                 Character c = 'c';
                 return sub_print(!value.getClass().equals(c.getClass()));
