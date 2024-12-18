@@ -9,7 +9,7 @@ public class Palindrome
          * @param input ต้องเป็น string : ต้องไม่เป็น null
          * @return empty list เมื่อ empty string| linkedlist of character
          */
-        public LinkedList<Character> stringToLinkedList(String input)
+        public static LinkedList<Character> stringToLinkedList(String input)
         {
             input = input.toLowerCase();
             LinkedList<Character> for_return = new LinkedList<>();
@@ -28,7 +28,7 @@ public class Palindrome
          * @param input ต้องเป็น Linkedlist ของ character | not null
          * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
          */
-        public boolean palindromeCorrect(LinkedList<Character> input)
+        public static boolean palindromeCorrect(LinkedList<Character> input)
         {
             if(input.size() <= 1) return true;
 
@@ -43,19 +43,19 @@ public class Palindrome
          * @param input ต้องเป็น Linkedlist ของ character | not null
          * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
          */
-        public boolean palindromeWTHRecursive(LinkedList<Character> input)
+        public static boolean palindromeWTHRecursive(LinkedList<Character> input)
         {
-            boolean result = false; 
+            boolean result = false;
 
             if (input.isEmpty()) return result;
 
             if (input.size() == 1) return result;
 
-            Character first = input.removeFirst(), last = input.removeLast();
+            Character first = new Character(input.removeFirst()), last = new Character(input.removeLast());
 
             boolean check = first == last; 
 
-            return check || palindromeWTHRecursive(input); 
+            return check || palindromeWTHRecursive(input);
         }
 
         /**
@@ -63,13 +63,13 @@ public class Palindrome
          * @param input ต้องเป็น Linkedlist ของ character | not null
          * @return จะจริงเมื่อ มีตัวอักษร 0 หรือ 1 และ ตัวอักษรตัวหน้าและหลังในตำแหน่งที่ i และ lenght-i ต้องเป็นตัวเดียวกัน โดยที่ไม่เป็น Sensitive case 
          */
-        public Boolean palindromeWTHLoop(LinkedList<Character> input)
+        public static Boolean palindromeWTHLoop(LinkedList<Character> input)
         {
             Boolean result = false; 
 
             while(input.size() > 1)
             {
-                Character first = input.removeFirst(), last = input.removeLast();
+                Character first = new Character(input.removeFirst()), last = new Character(input.removeLast());
 
                 boolean check = first == last;  
 
