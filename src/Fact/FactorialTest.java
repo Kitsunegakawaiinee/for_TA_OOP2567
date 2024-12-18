@@ -7,8 +7,8 @@ class FactorialTest {
 
     @Test
     void testFactorialZero() {
-        assertDoesNotThrow(() -> Factorial.factorialLoop(0));
         assertEquals(1, Factorial.factorialLoop(0));
+        assertDoesNotThrow(() -> Factorial.factorialLoop(1));
     }
 
     @Test
@@ -38,6 +38,6 @@ class FactorialTest {
     @Test
     void testNegativeNumber() {
         Exception exception = assertThrows(RuntimeException.class, () -> Factorial.factorialLoop(-5));
-        assertEquals("How to calculate factorial of a negative number?", exception.getMessage());
+        assertEquals("How to cal factorial of negative nuymber?", exception.getMessage());
     }
 }

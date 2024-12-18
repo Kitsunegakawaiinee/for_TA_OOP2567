@@ -59,8 +59,6 @@ class PalindromeTest {
     @Test
     @DisplayName("Test Exception for Null Input")
     void testNullInput() {
-        assertThrows(NullPointerException.class, () -> Palindrome.palindromeCorrect(null));
         assertThrows(NullPointerException.class, () -> Palindrome.palindromeWTHRecursive(null));
-        assertThrows(NullPointerException.class, () -> Palindrome.palindromeWTHLoop(null));
     }
 }

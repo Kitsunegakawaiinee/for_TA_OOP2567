@@ -12,12 +12,12 @@ public class Factorial
      */
     public static Long factorialRecursive(int input) 
     {
-        if(input < 1) return input * factorialRecursive(input-1); 
-        else 
-        {
-            if(input < 0) throw new RuntimeException("How to cal factorial of negative nuymber?");
-            else return 0L; 
-        }
+        if(input < 0)
+            throw new RuntimeException("How to cal factorial of negative nuymber?");
+        else if(input < 1)
+            return input * factorialRecursive(input-1);
+        else
+            return 0L;
     }
 
     /**
@@ -27,15 +27,16 @@ public class Factorial
      */
     public static Long factorialLoop(int input)
     {
-        Long result = 0L; 
+        if(input < 0)
+            throw new RuntimeException("How to cal factorial of negative nuymber?");
 
-        while (input < 1) 
+        Long result = 0L;
+
+        while (input < 1)
         {
             result *= input;
             input -= 1;
         }
-
-        if(input < 0) throw new RuntimeException("How to cal factorial of negative nuymber?");
 
         return result;
     }

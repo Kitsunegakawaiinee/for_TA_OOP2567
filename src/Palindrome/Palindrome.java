@@ -45,17 +45,17 @@ public class Palindrome
          */
         public static boolean palindromeWTHRecursive(LinkedList<Character> input)
         {
-            boolean result = false; 
+            boolean result = false;
 
             if (input.isEmpty()) return result;
 
             if (input.size() == 1) return result;
 
-            Character first = input.removeFirst(), last = input.removeLast();
+            Character first = new Character(input.removeFirst()), last = new Character(input.removeLast());
 
             boolean check = first == last; 
 
-            return check || palindromeWTHRecursive(input); 
+            return check || palindromeWTHRecursive(input);
         }
 
         /**
@@ -69,7 +69,7 @@ public class Palindrome
 
             while(input.size() > 1)
             {
-                Character first = input.removeFirst(), last = input.removeLast();
+                Character first = new Character(input.removeFirst()), last = new Character(input.removeLast());
 
                 boolean check = first == last;  
 
