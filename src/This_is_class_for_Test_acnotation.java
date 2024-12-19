@@ -6,16 +6,6 @@ import java.util.HashMap;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class This_is_class_for_Test_acnotation
 {
-//    static String[] for_print =
-//            {
-//                    "BeforeAll: Hi, I am from BeforeAll\n",
-//                    "AfterALL: I'm from AfterALL. Hello and Good bye",
-//                    "BeforeEach1: Let's start test",
-//                    "BeforeEach2: I'm so lazy",
-//                    "AfterEach1: Test2, what going on?\n",
-//                    "BeforeEach3: zzzzzzzzzzzzzzzz",
-//                    "AfterEach2: No Test, No bug"
-//            };
 
     static HashMap<String, String> comunication;
 
@@ -26,13 +16,14 @@ public class This_is_class_for_Test_acnotation
     }
 
     @BeforeAll
-    static void bfa1()
+    static void bfa()
     {
         comunication = new HashMap<>();
 
         comunication.put("BeforeALL1","BeforeAll1: Hi, I am from BeforeAll");
         comunication.put("BeforeALL2","BeforeAll2: HAHAHHAHAHAHA\n");
-        comunication.put("AfterALL", "AfterALL: I'm from AfterALL. Hello and Good bye");
+        comunication.put("AfterALL0", "AfterALL1: I'm from AfterALL. Hello and Good bye");
+        comunication.put("AfterALLNoNumber", "AfterALLNoNumber: Hi I am afterALL with highest priority");
 
         comunication.put("BeforeEach1", "BeforeEach1: Let's start test");
         comunication.put("BeforeEach2", "BeforeEach2: I'm so lazy");
@@ -45,15 +36,15 @@ public class This_is_class_for_Test_acnotation
     }
 
     @BeforeAll
-    static  void bfa2()
+    static  void bfa1()
     {
         System.out.println(comunication.get("BeforeALL2"));
     }
 
     @AfterAll
-    static  void afa()
+    static  void afa0()
     {
-        System.out.println(comunication.get("AfterALL"));
+        System.out.println(comunication.get("AfterALL0"));
     }
 
     @BeforeEach
@@ -63,7 +54,7 @@ public class This_is_class_for_Test_acnotation
     }
 
     @Test
-    void test1()
+    void test4()
     {
         System.out.println("Test1 : What do you want to test");
     }
@@ -96,6 +87,12 @@ public class This_is_class_for_Test_acnotation
     void bfe3()
     {
         System.out.println(comunication.get("BeforeEach3"));
+    }
+
+    @AfterAll
+    static void afa()
+    {
+        System.out.println(comunication.get("AfterALLNoNumber"));
     }
 
 }
