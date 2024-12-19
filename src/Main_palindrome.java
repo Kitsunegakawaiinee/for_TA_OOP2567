@@ -8,7 +8,6 @@ public class Main_palindrome
 {
     private static void testCase1()
     {
-        Palindrome program = new Palindrome();
 
         List<String> test_case = Arrays.asList
         
@@ -28,12 +27,12 @@ public class Main_palindrome
 
         for(String i: test_case)
         {
-            LinkedList<Character> input1 = program.stringToLinkedList(i);
-            LinkedList<Character> input2 = program.stringToLinkedList(i);
-            LinkedList<Character> input3 = program.stringToLinkedList(i);
-            System.out.printf("(CORRECT) [is palindrome? : word ] = [%b : %s]\n",program.palindromeCorrect(input1),i);
-            System.out.printf("(WTH_REC) [is palindrome? : word ] = [%b : %s]\n",program.palindromeWTHRecursive(input2),i);
-            System.out.printf("(WTH_LOO) [is palindrome? : word ] = [%b : %s]\n\n",program.palindromeWTHLoop(input3),i);
+            LinkedList<Character> input1 = Palindrome.stringToLinkedList(i);
+            LinkedList<Character> input2 = Palindrome.stringToLinkedList(i);
+            LinkedList<Character> input3 = Palindrome.stringToLinkedList(i);
+            System.out.printf("(CORRECT) [is palindrome? : word ] = [%b : %s]\n",Palindrome.palindromeCorrect(input1),i);
+            System.out.printf("(WTH_REC) [is palindrome? : word ] = [%b : %s]\n",Palindrome.palindromeWTHRecursive(input2),i);
+            System.out.printf("(WTH_LOO) [is palindrome? : word ] = [%b : %s]\n\n",Palindrome.palindromeWTHLoop(input3),i);
         }
     }
 
