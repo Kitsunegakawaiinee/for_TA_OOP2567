@@ -8,7 +8,7 @@
 
 ให้ทำตามในนี้เลย
 
-[Link Text]https://www.jetbrains.com/help/idea/junit.html#intellij
+[Setup Junit5 in IntelliJ](https://www.jetbrains.com/help/idea/junit.html#intellij)
 (ในห้องผมอาาจะกดบางอย่างพลาดไปต้องขออภัยด้วยครับ แต่ว่าทำตาม link นี้ก็ชัวร์สุดแล้ว)
 
 หากว่ามี Project อยู่แล้ว และอยากจะเพิ่ม Test ก็สามารถทำได้เลย 
@@ -20,7 +20,7 @@
 
 ## Annotation
 
-[Link Text]https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/package-summary.html
+[JUnit5 assertion Document](https://junit.org/junit5/docs/current/api/org.junit.jupiter.api/org/junit/jupiter/api/package-summary.html)
 
 ผมต้องขอโทษด้วยเรื่องที่ผม อธิบายเรื่องลำดับของ Before After ผิดไป
 
@@ -38,7 +38,7 @@
 
 ## Asserion
 
-[Link Text]https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html
+[JUnit5 Assertion Document](https://junit.org/junit5/docs/5.0.1/api/org/junit/jupiter/api/Assertions.html)
 
 ผมได้เตรียมไฟล์ไว้ให้ลองเล่น 2 ตัวแล้วนะครับ (ที่ชื่อยาวๆ ลองเล่นได้เลยครับ)
 
@@ -46,7 +46,7 @@
 
 ## Testing result
 
-https://www.jetbrains.com/help/idea/viewing-and-exploring-test-results.html#sort-test-results
+[Test Results](https://www.jetbrains.com/help/idea/viewing-and-exploring-test-results.html#sort-test-results)
 
 ในเครื่องหลายๆคนอาจจะมีสีที่แตกต่างไปจากของผมนะครับ ผมไม่แน่ใจว่าทำไมแต่ คาดว่า อาจจะเป็นเพราะ Operator System ครับ 
 
