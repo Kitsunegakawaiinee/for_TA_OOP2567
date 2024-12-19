@@ -1,6 +1,6 @@
 ## Table of Contents
-- [Setup Junit](#Setup JUnit)
-- [Debugger](#Debuger)
+- [Setup Junit](#Setup-JUnit)
+- [Debugger](#Debugger)
 
 ---
 
