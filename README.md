@@ -1,7 +1,8 @@
 ## Table of Contents
-- [Introduction](#Setup JUnit)
-- [Installation](#Debuger)
+- [Setup Junit](#Setup JUnit)
+- [Debugger](#Debuger)
 
+---
 
 ## Setup JUnit
 
@@ -43,7 +44,7 @@
 
 ---
 
-## Debuger
+## Debugger
 
 ผมและ TA Chin ได้เตรียมให้เล่น 3 ตัวอย่างครับ
 [Go to Introduction] (#Find_length)
