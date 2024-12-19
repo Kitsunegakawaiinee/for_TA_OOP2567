@@ -30,8 +30,8 @@ public class This_is_class_for_Test_acnotation
     {
         comunication = new HashMap<>();
 
-        comunication.put("BeforeALL1","BeforeAll1: Hi, I am from BeforeAll\n");
-        comunication.put("BeforeALL2","BeforeAll2: HAHAHHAHAHAHA");
+        comunication.put("BeforeALL1","BeforeAll1: Hi, I am from BeforeAll");
+        comunication.put("BeforeALL2","BeforeAll2: HAHAHHAHAHAHA\n");
         comunication.put("AfterALL", "AfterALL: I'm from AfterALL. Hello and Good bye");
 
         comunication.put("BeforeEach1", "BeforeEach1: Let's start test");
