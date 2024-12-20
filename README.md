@@ -34,7 +34,9 @@
 
   ในกรณีนี้ AfterAllTest จะทำงานก่อน AfterAllTest0
 
-  [![image](https://github.com/user-attachments/assets/e15f80af-2433-4105-8669-2526ea60a8c4)
+  ![image](https://github.com/user-attachments/assets/e15f80af-2433-4105-8669-2526ea60a8c4)
+
+  https://junit.org/junit5/docs/current/user-guide/
 
 ---
 
